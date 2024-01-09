@@ -7,9 +7,14 @@
   margin: 0;
 }
 
+html,
 body {
   width: 100vw;
   height: 100vh;
+}
+
+body {
+  overflow: auto;
   display: flex;
   justify-content: center;
   align-items: center;

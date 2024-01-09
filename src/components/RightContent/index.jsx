@@ -20,7 +20,6 @@ const RightContent = () => {
   const showNoteBookList = useRecoilValue(showNoteBookListState);
   const selectNoteBook = useRecoilValue(selectNoteBookState);
   const [memoList, setMemoList] = useRecoilState(memoListState);
-  const [selectMemo, setSelectMemo] = useRecoilState(selectMemoState);
   const [memo, setMemo] = useState([]);
 
   useEffect(() => {
