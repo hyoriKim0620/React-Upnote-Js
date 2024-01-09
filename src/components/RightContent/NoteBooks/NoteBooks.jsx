@@ -29,17 +29,14 @@ const NoteBooks = () => {
   const noteBooksName = useRecoilValue(NotebooksName);
   const noteBookList = useRecoilValue(noteBookListState); // noteBookList
   const [, setEditNoteBook] = useRecoilState(editNoteBookState);
-  const [, setShowCreateNoteBook] = useRecoilState(showCreateNoteBookState);
+  const [showCreateNoteBook, setShowCreateNoteBook] = useRecoilState(
+    showCreateNoteBookState
+  );
   const [, setSelectNoteBook] = useRecoilState(selectNoteBookState);
   const [, setShowNoteBookList] = useRecoilState(showNoteBookListState);
   const [, setSelectMemo] = useRecoilState(selectMemoState);
   const memoList = useRecoilValue(memoListState);
   const [checked, setChecked] = useState(true);
-
-  const handleShowNoteBookList = () => {
-    setShowNoteBookList(true);
-    setSelectNoteBook({});
-  };
 
   const handleToggle = (value) => {
     setChecked(value);
@@ -125,7 +122,7 @@ const NoteBooks = () => {
               <PiBooksThin size={50} color="gray" />
             </div>
             <p>You can organize notes of same topic into notebooks.</p>
-            <p onClick={handleShowNoteBookList}>
+            <p onClick={handleShowCreateNoteBook}>
               Create New {noteBooksName.toLocaleLowerCase()}
             </p>
           </EmptyContent>
