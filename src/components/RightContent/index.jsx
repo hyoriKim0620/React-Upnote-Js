@@ -2,7 +2,7 @@
 import { useRecoilState, useRecoilValue } from "recoil";
 import {
   memoListState,
-  selectMemoState,
+  // selectMemoState,
   selectNoteBookState,
   showNoteBookListState,
 } from "../../store/recoil";
